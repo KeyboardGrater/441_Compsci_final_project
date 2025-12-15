@@ -220,7 +220,7 @@ def check_if_evolves_further(evolution_chain_data, target_pokemon_name):
         
         # Check the current link
         if current_species == target_name:
-            # If the 'evolves_to' list is NOT empty, it evolves further.
+            # If the 'evolves_to' list is not empty, it evolves further.
             return bool(chain_link.get('evolves_to'))
 
         # Recurse down the chain
@@ -234,7 +234,7 @@ def check_if_evolves_further(evolution_chain_data, target_pokemon_name):
     # Start the search from the base of the chain
     result = find_evolution_status(evolution_chain_data['chain'], target_pokemon_name)
     
-    # Return True/False, defaulting to False if the Pokémon was not found in the chain
+    # Return true/false, defaulting to false if the Pokémon was not found in the chain
     return result if result is not None else False
 
 def evolves_by_trading (pokemon_id):
